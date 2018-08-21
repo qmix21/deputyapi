@@ -83,9 +83,9 @@ class DeputyController extends Controller
             'Authorization' => 'Bearer '. $accessToken,
             'Accept' => 'application/json',
         ];
-        return $timesheetID;
-        //$res = $client->request('POST','supervise/timesheet/end',['headers' => $headers],['intTimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak]);
-        //return $request;
+        //return $timesheetID;
+        $res = $client->request('POST','supervise/timesheet/end',['intTimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak],['headers' => $headers]);
+        return $request;
 
 
     }
