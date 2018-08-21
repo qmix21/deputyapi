@@ -16,7 +16,7 @@ class DeputyController extends Controller
     // URL :   310e1921074643.au.deputy.com
     public function index()
     {
-    $url = "310e1921074643.au.deputy.com";
+    $url = "https://310e1921074643.au.deputy.com";
 
         return Redirect::away($url . '/me');
     }
