@@ -70,6 +70,8 @@ class DeputyController extends Controller
      */
     public function edit(Request $request)
     {
+
+
         ////supervise/timesheet/end
 
         //TimesheetId : The timesheet you are finishing
@@ -84,7 +86,7 @@ class DeputyController extends Controller
             'Accept' => 'application/json',
         ];
         $res = $client->request('POST','supervise/empshiftinfo/1',['headers' => $headers,'TimesheetId'=>$timesheetID,'MealbreakMinute'=>$mealbreak]);
-        return $res;
+        return $request;
 
 
     }
