@@ -25,9 +25,9 @@ class DeputyController extends Controller
             'Accept' => 'application/json',
         ];
         $res = $client->request('GET','me',['headers' => $headers]);
-        echo $res->getStatusCode(); // 200
-        echo $res->getBody(); // { "type": "User", ....
-
+        $res->getStatusCode(); // 200
+        $res->getBody(); // { "type": "User", ....
+        return $res;
     }
 
     /**
