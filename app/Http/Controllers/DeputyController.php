@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use App\Deputy;
 use Illuminate\Http\Request;
-require('./vendor/autoload.php');
 
 class DeputyController extends Controller
 {
@@ -17,7 +16,7 @@ class DeputyController extends Controller
     public function index()
     {
         $url = "https://310e1921074643.au.deputy.com/api/v1/me";
-        $client = new GuzzleHttp\Client();
+        $client = new \GuzzleHttp\Client();
         $res = $client->get("https://310e1921074643.au.deputy.com/api/v1/me");
         echo $res->getStatusCode(); // 200
         echo $res->getBody(); // { "type": "User", ....
