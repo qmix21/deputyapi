@@ -18,7 +18,7 @@ class DeputyController extends Controller
     {
     $url = "310e1921074643.au.deputy.com";
 
-        return redirect($url . '/me');
+        return Redirect::to($url . '/me');
     }
 
     /**
