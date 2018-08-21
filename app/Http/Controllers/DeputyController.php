@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\DeputyController;
+use App\Deputy;
 use Illuminate\Http\Request;
 
-class Deputy extends Controller
+class DeputyController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    // URL :   310e1921074643.au.deputy.com
+    public $url = "310e1921074643.au.deputy.com";
     public function index()
     {
-        //
+        return http_redirect($url . '/me');
     }
 
     /**
