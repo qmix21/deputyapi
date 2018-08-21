@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('/me','DeputyController@index');
 
 
-Route::post('/post',function()
+Route::post('/index',function()
 {
 	return view('index');
 });
