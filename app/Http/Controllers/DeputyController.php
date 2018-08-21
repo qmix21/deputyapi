@@ -12,7 +12,7 @@ class DeputyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    require './vendor/autoload.php';
+    require('./vendor/autoload.php');
     // URL :   310e1921074643.au.deputy.com
     public function index()
     {
