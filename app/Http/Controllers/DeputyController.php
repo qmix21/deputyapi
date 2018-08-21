@@ -24,7 +24,7 @@ class DeputyController extends Controller
             'Authorization' => 'Bearer '. $accessToken,
             'Accept' => 'application/json',
         ];
-        $res = $client->request('GET','resource/Employee/1/Timesheet',['headers' => $headers]);
+        $res = $client->request('GET','my/Timesheet',['headers' => $headers]);
         $res->getStatusCode(); // 200
         $res->getBody(); // { "type": "User", ....
         return $res;
