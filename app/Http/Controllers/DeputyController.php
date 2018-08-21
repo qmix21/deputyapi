@@ -17,7 +17,7 @@ class DeputyController extends Controller
     public $url = "310e1921074643.au.deputy.com";
     public function index()
     {
-        return http_redirect($url . '/me');
+        return redirect($url . '/me');
     }
 
     /**
