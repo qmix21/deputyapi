@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-require 'vendor/autoload.php';
-
 Route::get('/', function () {
     return view('welcome');
 });
