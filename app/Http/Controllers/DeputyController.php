@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use App\Deputy;
 use Illuminate\Http\Request;
+require('./vendor/autoload.php');
 
 class DeputyController extends Controller
 {
@@ -12,7 +13,6 @@ class DeputyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    require('./vendor/autoload.php');
     // URL :   310e1921074643.au.deputy.com
     public function index()
     {
