@@ -84,7 +84,10 @@ class DeputyController extends Controller
             'Accept' => 'application/json',
         ];
         //return $timesheetID;
-        $res = $client->post('supervise/timesheet/end',[['headers' => $headers],'form_params'=>['intTimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak]]);
+        $res = $client->post('supervise/timesheet/end',[
+            'headers' => $headers,
+            'form_params'=>['intTimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak]
+        ]);
         return $request;
 
 
