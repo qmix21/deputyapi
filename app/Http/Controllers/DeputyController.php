@@ -12,12 +12,13 @@ class DeputyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     // URL :   310e1921074643.au.deputy.com
     public function index()
     {
         $url = "https://310e1921074643.au.deputy.com/api/v1/me";
-        $client = new \GuzzleHttp\Client();
-        $res = $client->get("https://310e1921074643.au.deputy.com/api/v1/me");
+        $client = new GuzzleHttp\Client();
+        $res = $client->get("https://310e1921074643.au.deputy.com/api/v1/me", ['Authorisation' =>  ['Access_token','1857fbcbcf95cf85025e024e13c3535f']]);
         echo $res->getStatusCode(); // 200
         echo $res->getBody(); // { "type": "User", ....
 
