@@ -70,8 +70,6 @@ class DeputyController extends Controller
      */
     public function edit(Request $request)
     {
-
-    {{ csrf_field() }}
         ////supervise/timesheet/end
 
         //TimesheetId : The timesheet you are finishing
