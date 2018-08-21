@@ -14,11 +14,12 @@ class DeputyController extends Controller
      */
 
     // URL :   310e1921074643.au.deputy.com
+    //Access token : 1857fbcbcf95cf85025e024e13c3535f
     public function index()
     {
         $url = "https://310e1921074643.au.deputy.com/api/v1/me";
         $client = new \GuzzleHttp\Client();
-        $res = $client->get("https://310e1921074643.au.deputy.com/api/v1/me", ['auth' => 'OAuth 1857fbcbcf95cf85025e024e13c3535f']);
+        $res = $client->get("https://310e1921074643.au.deputy.com/api/v1/me", ['auth' => 'oauth']);
         echo $res->getStatusCode(); // 200
         echo $res->getBody(); // { "type": "User", ....
 
