@@ -68,9 +68,25 @@ class DeputyController extends Controller
      * @param  \App\DeputyController  $deputyController
      * @return \Illuminate\Http\Response
      */
-    public function edit(DeputyController $deputyController)
+    public function edit(Request $request)
     {
-        //
+        ////supervise/timesheet/end
+
+        //TimesheetId : The timesheet you are finishing
+        //MealbreakMinute : Total number of minutes as mealbreak
+        $timesheetID = $request->timesheet;
+        $mealbreak = $request->mealbreak;
+
+        $accessToken = "1857fbcbcf95cf85025e024e13c3535f";
+        $client = new \GuzzleHttp\Client(['base_uri'=>'https://310e1921074643.au.deputy.com/api/v1/']);
+        $headers =[
+            'Authorization' => 'Bearer '. $accessToken,
+            'Accept' => 'application/json',
+        ];
+        $res = $client->request('POST','supervise/empshiftinfo/1',['headers' => $headers,'TimesheetId'=>$timesheetID,'MealbreakMinute'=>$mealbreak]);.
+        return $res;
+
+
     }
 
     /**
