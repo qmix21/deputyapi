@@ -86,7 +86,7 @@ class DeputyController extends Controller
         //return $timesheetID;
         $res = $client->post('supervise/timesheet/end',[
             'headers' => $headers,
-            'form_params'=>['intTimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak]
+            'form_params'=>['TimesheetId'=>$timesheetID,'intMealbreakMinute'=>$mealbreak]
         ]);
         return $request;
 
