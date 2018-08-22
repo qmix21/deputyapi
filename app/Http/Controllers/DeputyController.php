@@ -107,7 +107,7 @@ class DeputyController extends Controller
         //return $timesheetID;
         $res = $client->post('supervise/timesheet/start',[
             'headers' => $headers,
-            'form_params'=>['intEmloyeeId'=>$intEmloyeeId,'intOpunitId'=>$intOpunitId]
+            'form_params'=>['intEmloyeeId'=>$intEmployeeId,'intOpunitId'=>$intOpunitId]
         ]);
         return $request;
     }
