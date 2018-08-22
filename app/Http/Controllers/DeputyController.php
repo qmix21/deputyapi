@@ -86,11 +86,30 @@ class DeputyController extends Controller
         //return $timesheetID;
         $res = $client->post('supervise/timesheet/end',[
             'headers' => $headers,
-            'form_params'=>[['timesheet Id'=>1],['intMealbreakMinute'=>30]]
+            'form_params'=>['intTimesheetId'=>1,'intMealbreakMinute'=>30]
         ]);
         return $request;
 
 
+    }
+
+    public function start(Request $request)
+    {
+         $intEmployeeId = $request->empId;
+        $intOpunitId = $request->unitId;
+
+        $accessToken = "1857fbcbcf95cf85025e024e13c3535f";
+        $client = new \GuzzleHttp\Client(['base_uri'=>'https://310e1921074643.au.deputy.com/api/v1/']);
+        $headers =[
+            'Authorization' => 'Bearer '. $accessToken,
+            'Accept' => 'application/json',
+        ];
+        //return $timesheetID;
+        $res = $client->post('supervise/timesheet/start',[
+            'headers' => $headers,
+            'form_params'=>['intEmloyeeId'=>$intEmloyeeId,'intOpunitId'=>$intOpunitId]
+        ]);
+        return $request;
     }
 
     /**

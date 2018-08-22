@@ -22,3 +22,5 @@ Route::get('/index',function()
 	return view('index');
 });
 Route::post('/post','DeputyController@edit');
+
+Route::post('/start','DeputyController@start');
